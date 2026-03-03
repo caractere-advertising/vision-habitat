@@ -30,7 +30,7 @@ Objectif : installer le thème, compiler les assets et comprendre le workflow.
 
 ```bash
 cd /path/to/wordpress/wp-content/themes
-git clone https://gitlab.com/caractere-advertising/vision-habitat.git vision-habitat
+git clone https://github.com/caractere-advertising/vision-habitat.git vision-habitat
 cd vision-habitat
 ```
 

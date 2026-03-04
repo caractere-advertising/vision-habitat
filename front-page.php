@@ -1,10 +1,6 @@
+<?php get_header();?>
 
-
-<?php 
-
-
-$slider = get_field('slider');
-?>
+<?php $slider = get_field('slider');?>
 
 <header> 
     <div>
@@ -12,3 +8,5 @@ $slider = get_field('slider');
     </div>
     <nav></nav>
 </header>test
+
+<?php get_footer();?>

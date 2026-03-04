@@ -24,7 +24,19 @@ module.exports = (env, argv) => {
           test: /\.css$/i,
           use: [
             isProduction ? MiniCssExtractPlugin.loader : "style-loader",
-            "css-loader",
+            {
+              loader: "css-loader",
+              options: { sourceMap: !isProduction },
+            },
+            {
+              loader: "postcss-loader",
+              options: {
+                sourceMap: !isProduction,
+                postcssOptions: {
+                  plugins: [require("@tailwindcss/postcss")],
+                },
+              },
+            },
           ],
         },
 
@@ -42,7 +54,10 @@ module.exports = (env, argv) => {
               options: {
                 sourceMap: !isProduction,
                 postcssOptions: {
-                  plugins: [require("autoprefixer")],
+                  plugins: [
+                    require("@tailwindcss/postcss"),
+                    require("autoprefixer"),
+                  ],
                 },
               },
             },

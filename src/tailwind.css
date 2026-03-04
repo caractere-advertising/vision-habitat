@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* WordPress theme files */
+@source "../**/*.php";
+
+/* Front assets */
+@source "./**/*.{js,scss,css}";
+@custom-variant dark (&:where(.dark, .dark *));
